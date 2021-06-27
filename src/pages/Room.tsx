@@ -1,5 +1,7 @@
 import { useParams } from "react-router"
-import { useState,FormEvent, useEffect } from "react"
+import { useState,FormEvent } from "react"
+
+import { useHistory } from "react-router-dom"
 import { useAuth } from "../hooks/useAuth"
 import { useRoom } from "../hooks/useRoom"
 
@@ -28,7 +30,7 @@ export function Room (){
     const roomId = params.id
     const {questions, title} = useRoom(roomId)
     
-
+    const history = useHistory()
 
 
 
@@ -70,12 +72,21 @@ export function Room (){
         }
     }
 
+
+    function handleLeaveRoom() {
+        history.push('/')
+    }
+
     return (
         <div id="page-room">
             <header>
                 <div className="content">
                     <img src={logoImg} alt="Letmeask" />
+                    <div>
                     <RoomCode code={roomId}/>
+                    <Button isOutlined onClick={handleLeaveRoom}>Sair da sala</Button>
+                    </div>
+
                 </div>
             </header>
 
