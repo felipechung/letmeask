@@ -11,7 +11,7 @@
 
 ## Description
 
-A website for users to answer/ask questions. This project was built during the Rocketseat Next Level Week #5.
+A website for users to answer/ask questions. This project was coded along with the instructor of the Rocketseat Next Level Week #5. The design was provided by the Rocketseat team.
 
 #### Technologies
 
